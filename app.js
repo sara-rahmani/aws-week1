@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Before the other routes
-app.use(express.static("build"))
+app.use(express.static("build1"))
 
 
 
@@ -49,7 +49,7 @@ app.get("/api/pokemons", (req, res) => {
 
 // After all other routes
 app.get('*', (req, res) => {
-  res.sendFile('build/index.html');
+  res.sendFile('build1/index.html');
 });
 const port = process.env.PORT || 8081
 app.listen(port, () => console.log(`listening on port ${port}`))
