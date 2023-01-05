@@ -51,5 +51,5 @@ app.get("/api/pokemons", (req, res) => {
 app.get('*', (req, res) => {
   res.sendFile('build/index.html');
 });
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8081
 app.listen(port, () => console.log(`listening on port ${port}`))
